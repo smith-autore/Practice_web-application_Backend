@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>DATABASE</ID>
+  <OriginalElement>232c4eb7-17bc-486f-aeb5-922e4ec5e3c4.SCHEMA:property_for_sale.public</OriginalElement>
+  <nodes>
+    <node x="208.0" y="33.0">232c4eb7-17bc-486f-aeb5-922e4ec5e3c4.TABLE:property_for_sale.public.buyer</node>
+    <node x="233.5" y="300.0">232c4eb7-17bc-486f-aeb5-922e4ec5e3c4.TABLE:property_for_sale.public.transactions</node>
+    <node x="0.0" y="0.0">232c4eb7-17bc-486f-aeb5-922e4ec5e3c4.TABLE:property_for_sale.public.apartment</node>
+    <node x="434.0" y="33.0">232c4eb7-17bc-486f-aeb5-922e4ec5e3c4.TABLE:property_for_sale.public.seller</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="232c4eb7-17bc-486f-aeb5-922e4ec5e3c4.TABLE:property_for_sale.public.transactions" target="232c4eb7-17bc-486f-aeb5-922e4ec5e3c4.TABLE:property_for_sale.public.apartment">
+      <point x="-51.66666666666663" y="-92.0" />
+      <point x="259.33333333333337" y="275.0" />
+      <point x="94.0" y="275.0" />
+      <point x="0.0" y="125.0" />
+    </edge>
+    <edge source="232c4eb7-17bc-486f-aeb5-922e4ec5e3c4.TABLE:property_for_sale.public.transactions" target="232c4eb7-17bc-486f-aeb5-922e4ec5e3c4.TABLE:property_for_sale.public.seller">
+      <point x="51.666666666666686" y="-92.0" />
+      <point x="362.6666666666667" y="275.0" />
+      <point x="536.0" y="275.0" />
+      <point x="0.0" y="92.0" />
+    </edge>
+    <edge source="232c4eb7-17bc-486f-aeb5-922e4ec5e3c4.TABLE:property_for_sale.public.transactions" target="232c4eb7-17bc-486f-aeb5-922e4ec5e3c4.TABLE:property_for_sale.public.buyer">
+      <point x="0.0" y="-92.0" />
+      <point x="0.0" y="92.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.7281746031746031" x="319.0" y="242.0" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Key columns</Category>
+    <Category>Columns</Category>
+    <Category>Virtual foreign keys</Category>
+  </Categories>
+</Diagram>
+
