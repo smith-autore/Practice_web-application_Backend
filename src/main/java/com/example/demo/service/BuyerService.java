@@ -7,7 +7,7 @@ import java.util.List;
 public interface BuyerService {
 
     /**
-     * Создание нового клиента
+     * Создание нового покупателя
      * @param buyer - покупатель для создания
      */
 
@@ -21,10 +21,10 @@ public interface BuyerService {
 
     /**
      * Возвращение покупателя по его ID
-     * @param id_buyer - ID покупателя
+     * @param idBuyer - ID покупателя
      * @return - объект покупателя с заданным ID
      */
-    Buyer read(int id_buyer);
+    Buyer read(int idBuyer);
 
     /**
      * Обновление покупателя с заданным ID,
@@ -33,13 +33,13 @@ public interface BuyerService {
      * @param - true если данные были обновлены, иначе false
      */
 
-    boolean update(Buyer buyer, int id_buyer);
+    boolean update(Buyer buyer, int idBuyer);
 
     /**
      * Удаление покупателя с заданным ID
-     * @param id_buyer - id покупателя, которого нужно удалить
+     * @param idBuyer - id покупателя, которого нужно удалить
      * @return - true если покупатель был удален, иначе false
      */
 
-    boolean delete(int id_buyer);
+    boolean delete(int idBuyer);
 }

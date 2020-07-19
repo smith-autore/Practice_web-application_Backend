@@ -28,14 +28,14 @@ public class BuyerServiceImpl implements BuyerService {
     }
 
     @Override
-    public Buyer read(int id_buyer) {
-        return buyerRepository.getOne(id_buyer);
+    public Buyer read(int idBuyer) {
+        return buyerRepository.getOne(idBuyer);
     }
 
     @Override
-    public boolean update(Buyer buyer, int id_buyer) {
-        if (buyerRepository.existsById(id_buyer)) {
-            buyer.setId_buyer(id_buyer);
+    public boolean update(Buyer buyer, int idBuyer) {
+        if (buyerRepository.existsById(idBuyer)) {
+            buyer.setIdBuyer(idBuyer);
             buyerRepository.save(buyer);
             return true;
         }
@@ -44,9 +44,9 @@ public class BuyerServiceImpl implements BuyerService {
     }
 
     @Override
-    public boolean delete(int id_buyer) {
-        if (buyerRepository.existsById(id_buyer)) {
-            buyerRepository.deleteById(id_buyer);
+    public boolean delete(int idBuyer) {
+        if (buyerRepository.existsById(idBuyer)) {
+            buyerRepository.deleteById(idBuyer);
             return true;
         }
         return false;

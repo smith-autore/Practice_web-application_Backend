@@ -35,8 +35,8 @@ public class BuyerController {
     }
 
     @GetMapping(value = "/buyers/{id}")
-    public ResponseEntity<Buyer> read(@PathVariable(name = "id") int id_buyer) {
-        final Buyer buyer = buyerService.read(id_buyer);
+    public ResponseEntity<Buyer> read(@PathVariable(name = "id") int idBuyer) {
+        final Buyer buyer = buyerService.read(idBuyer);
 
         return buyer != null
                 ? new ResponseEntity<>(buyer, HttpStatus.OK)
@@ -44,8 +44,8 @@ public class BuyerController {
     }
 
     @PutMapping(value = "/buyers/{id}")
-    public ResponseEntity<?> update(@PathVariable(name = "id") int id_buyer, @RequestBody Buyer buyer) {
-        final boolean updated = buyerService.update(buyer, id_buyer);
+    public ResponseEntity<?> update(@PathVariable(name = "id") int idBuyer, @RequestBody Buyer buyer) {
+        final boolean updated = buyerService.update(buyer, idBuyer);
 
         return updated
                 ? new ResponseEntity<>(HttpStatus.OK)
@@ -53,8 +53,8 @@ public class BuyerController {
     }
 
     @DeleteMapping(value = "/buyers/{id}")
-    public ResponseEntity<?> delete(@PathVariable(name = "id") int id_buyer) {
-        final boolean deleted = buyerService.delete(id_buyer);
+    public ResponseEntity<?> delete(@PathVariable(name = "id") int idBuyer) {
+        final boolean deleted = buyerService.delete(idBuyer);
 
         return deleted
                 ? new ResponseEntity<>(HttpStatus.OK)
