@@ -19,7 +19,7 @@ public class BuyerServiceImpl implements BuyerService {
 
     @Override
     public Buyer create(Buyer buyer) {
-        buyerRepository.save(buyer);
+         return buyerRepository.save(buyer);
     }
 
     @Override
