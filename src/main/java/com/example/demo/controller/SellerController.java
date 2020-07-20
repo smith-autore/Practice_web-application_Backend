@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@CrossOrigin
 public class SellerController {
 
     private final SellerService sellerService;
@@ -21,8 +22,8 @@ public class SellerController {
 
     @PostMapping(value = "/sellers")
     public ResponseEntity<?> create(@RequestBody Seller seller) {
-        sellerService.create(seller);
-        return new ResponseEntity<>(HttpStatus.CREATED);
+        Seller sellerPost = sellerService.create(seller);
+        return new ResponseEntity<>(sellerPost, HttpStatus.CREATED);
     }
 
     @GetMapping(value = "sellers")

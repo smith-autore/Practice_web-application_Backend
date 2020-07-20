@@ -11,7 +11,7 @@ public interface SellerService {
      * @param seller - продавец для создания
      */
 
-    void create(Seller seller);
+    Seller create(Seller seller);
 
     /**
      * Возвращение списка всех имеющихся продавцов

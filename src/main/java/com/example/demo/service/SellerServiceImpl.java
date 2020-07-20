@@ -18,8 +18,8 @@ public class SellerServiceImpl implements SellerService {
     private SellerRepository sellerRepository;
 
     @Override
-    public void create(Seller seller) {
-        sellerRepository.save(seller);
+    public Seller create(Seller seller) {
+        return sellerRepository.save(seller);
     }
 
     @Override
