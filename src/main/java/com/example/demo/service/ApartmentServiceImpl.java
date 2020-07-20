@@ -18,7 +18,7 @@ public class ApartmentServiceImpl implements ApartmentService {
     private ApartmentRepository apartmentRepository;
 
     @Override
-    public void create(Apartment apartment) {
+    public Apartment create(Apartment apartment) {
         apartmentRepository.save(apartment);
     }
 

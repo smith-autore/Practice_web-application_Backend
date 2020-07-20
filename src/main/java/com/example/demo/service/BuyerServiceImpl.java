@@ -18,7 +18,7 @@ public class BuyerServiceImpl implements BuyerService {
     private BuyerRepository buyerRepository;
 
     @Override
-    public void create(Buyer buyer) {
+    public Buyer create(Buyer buyer) {
         buyerRepository.save(buyer);
     }
 
