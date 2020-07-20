@@ -11,7 +11,7 @@ public interface DealService {
      * @param deal - сделка для создания
      */
 
-    void create(Deal deal);
+    Deal create(Deal deal);
 
     /**
      * Возвращение списка всех имеющихся сделок

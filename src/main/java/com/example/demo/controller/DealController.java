@@ -21,8 +21,8 @@ public class DealController {
 
     @PostMapping(value = "/deals")
     public ResponseEntity<?> create(@RequestBody Deal deal) {
-        dealService.create(deal);
-        return new ResponseEntity<>(HttpStatus.CREATED);
+        Deal dealPost = dealService.create(deal);
+        return new ResponseEntity<>(dealPost, HttpStatus.CREATED);
     }
 
     @GetMapping(value = "deals")

@@ -11,7 +11,7 @@ public interface BuyerService {
      * @param buyer - покупатель для создания
      */
 
-    void create(Buyer buyer);
+    Buyer create(Buyer buyer);
 
     /**
      * Возвращение списка всех имеющихся покупателей

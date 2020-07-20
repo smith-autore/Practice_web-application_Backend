@@ -11,7 +11,7 @@ public interface ApartmentService {
      * @param apartment - квартира для создания
      */
 
-    void create(Apartment apartment);
+    Apartment create(Apartment apartment);
 
     /**
      * Возвращение списка всех имеющихся квартир

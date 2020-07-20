@@ -21,8 +21,8 @@ public class ApartmentController {
 
     @PostMapping(value = "/apartments")
     public ResponseEntity<?> create(@RequestBody Apartment apartment) {
-        apartmentService.create(apartment);
-        return new ResponseEntity<>(HttpStatus.CREATED);
+        Apartment apartmentPost = apartmentService.create(apartment);
+        return new ResponseEntity<>(apartmentPost, HttpStatus.CREATED);
     }
 
     @GetMapping(value = "apartments")

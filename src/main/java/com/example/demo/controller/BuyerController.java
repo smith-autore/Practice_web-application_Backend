@@ -21,8 +21,8 @@ public class BuyerController {
 
     @PostMapping(value = "/buyers")
     public ResponseEntity<?> create(@RequestBody Buyer buyer) {
-        buyerService.create(buyer);
-        return new ResponseEntity<>(HttpStatus.CREATED);
+        Buyer buyerPost = buyerService.create(buyer);
+        return new ResponseEntity<>(buyerPost, HttpStatus.CREATED);
     }
 
     @GetMapping(value = "buyers")
