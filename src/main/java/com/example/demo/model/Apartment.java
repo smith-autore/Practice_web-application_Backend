@@ -36,9 +36,6 @@ public class Apartment {
     @Column(name = "living_space")
     private Float livingSpace;
 
-    @Column(name = "comfort_factor")
-    private Float comfortFactor;
-
     public Integer getIdApartment() {
         return idApartment;
     }
@@ -94,8 +91,4 @@ public class Apartment {
     public Float getLivingSpace() { return livingSpace; }
 
     public void setLivingSpace(Float livingSpace) { this.livingSpace = livingSpace;}
-
-    public Float getComfortFactor() { return comfortFactor; }
-
-    public void setComfortFactor(Float comfortFactor) {this.comfortFactor = comfortFactor; }
 }
