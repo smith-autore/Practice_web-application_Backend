@@ -49,7 +49,7 @@ public class DealController {
         final boolean updated = dealService.update(deal, idDeal);
 
         return updated
-                ? new ResponseEntity<>(HttpStatus.OK)
+                ? new ResponseEntity<>(deal, HttpStatus.OK)
                 : new ResponseEntity<>(HttpStatus.NOT_MODIFIED);
     }
 

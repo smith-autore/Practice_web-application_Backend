@@ -49,7 +49,7 @@ public class SellerController {
         final boolean updated = sellerService.update(seller, idSeller);
 
         return updated
-                ? new ResponseEntity<>(HttpStatus.OK)
+                ? new ResponseEntity<>(seller, HttpStatus.OK)
                 : new ResponseEntity<>(HttpStatus.NOT_MODIFIED);
     }
 

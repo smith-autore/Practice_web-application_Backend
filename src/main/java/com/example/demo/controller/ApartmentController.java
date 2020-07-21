@@ -49,7 +49,7 @@ public class ApartmentController {
         final boolean updated = apartmentService.update(apartment, idApartment);
 
         return updated
-                ? new ResponseEntity<>(HttpStatus.OK)
+                ? new ResponseEntity<>(apartment, HttpStatus.OK)
                 : new ResponseEntity<>(HttpStatus.NOT_MODIFIED);
     }
 

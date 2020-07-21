@@ -49,7 +49,7 @@ public class BuyerController {
         final boolean updated = buyerService.update(buyer, idBuyer);
 
         return updated
-                ? new ResponseEntity<>(HttpStatus.OK)
+                ? new ResponseEntity<>(buyer, HttpStatus.OK)
                 : new ResponseEntity<>(HttpStatus.NOT_MODIFIED);
     }
 
