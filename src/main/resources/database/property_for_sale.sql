@@ -19,7 +19,7 @@ CREATE TABLE IF NOT EXISTS seller
   full_name_seller varchar(100) NOT NULL,
   telephone_seller varchar(50),
   CONSTRAINT id_seller_pk PRIMARY KEY(id_seller),
-  CONSTRAINT login_seller_uk UNIQUE (login_seller, number_passport_seller));
+  CONSTRAINT login_seller_uk UNIQUE ( number_passport_seller));
  CREATE SEQUENCE seller_id_seq START WITH 3 INCREMENT 1;
 --DROP TABLE IF EXISTS seller;
 --DROP SEQUENCE IF EXISTS seller_id_seq;
@@ -33,6 +33,7 @@ CREATE TABLE apartment
   floor_apartment smallint,
   total_area numeric(5, 2),
   living_space numeric(5, 2),
+  comfort_factor numeric (2, 1),
   CONSTRAINT id_apartment_pk PRIMARY KEY(id_apartment),
   CONSTRAINT house_number_uk UNIQUE (house_number, apartment_number, street));
  CREATE SEQUENCE apartment_id_seq START WITH 11 INCREMENT 1;
