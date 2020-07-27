@@ -4,12 +4,9 @@ import com.example.demo.model.Apartment;
 import com.example.demo.repository.ApartmentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.data.domain.Sort;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-import java.util.concurrent.atomic.AtomicInteger;
 
 @Service
 public class ApartmentServiceImpl implements ApartmentService {
@@ -24,7 +21,7 @@ public class ApartmentServiceImpl implements ApartmentService {
 
     @Override
     public List<Apartment> readAll() {
-        return apartmentRepository.findAll();
+        return apartmentRepository.findAll(Sort.by(Sort.Direction.ASC, "idApartment"));
     }
 
     @Override

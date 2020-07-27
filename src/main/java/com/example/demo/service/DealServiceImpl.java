@@ -4,12 +4,9 @@ import com.example.demo.model.Deal;
 import com.example.demo.repository.DealRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.data.domain.Sort;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-import java.util.concurrent.atomic.AtomicInteger;
 
 @Service
 public class DealServiceImpl implements DealService {
@@ -24,7 +21,7 @@ public class DealServiceImpl implements DealService {
 
     @Override
     public List<Deal> readAll() {
-        return dealRepository.findAll();
+        return dealRepository.findAll(Sort.by(Sort.Direction.ASC, "idDeal"));
     }
 
     @Override

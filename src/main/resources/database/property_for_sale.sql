@@ -19,7 +19,7 @@ CREATE TABLE IF NOT EXISTS seller
   full_name_seller varchar(100) NOT NULL,
   telephone_seller varchar(50),
   CONSTRAINT id_seller_pk PRIMARY KEY(id_seller),
-  CONSTRAINT login_seller_uk UNIQUE ( number_passport_seller));
+  CONSTRAINT login_seller_uk UNIQUE (login_seller, number_passport_seller));
  CREATE SEQUENCE seller_id_seq START WITH 3 INCREMENT 1;
 --DROP TABLE IF EXISTS seller;
 --DROP SEQUENCE IF EXISTS seller_id_seq;

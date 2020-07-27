@@ -4,12 +4,9 @@ import com.example.demo.model.Buyer;
 import com.example.demo.repository.BuyerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.data.domain.Sort;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-import java.util.concurrent.atomic.AtomicInteger;
 
 @Service
 public class BuyerServiceImpl implements BuyerService {
@@ -24,7 +21,7 @@ public class BuyerServiceImpl implements BuyerService {
 
     @Override
     public List<Buyer> readAll() {
-        return buyerRepository.findAll();
+        return buyerRepository.findAll(Sort.by(Sort.Direction.ASC, "idBuyer"));
     }
 
     @Override

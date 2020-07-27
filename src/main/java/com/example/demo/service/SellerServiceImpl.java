@@ -3,13 +3,10 @@ package com.example.demo.service;
 import com.example.demo.model.Seller;
 import com.example.demo.repository.SellerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-import java.util.concurrent.atomic.AtomicInteger;
 
 @Service
 public class SellerServiceImpl implements SellerService {
@@ -24,7 +21,7 @@ public class SellerServiceImpl implements SellerService {
 
     @Override
     public List<Seller> readAll() {
-        return sellerRepository.findAll();
+        return sellerRepository.findAll(Sort.by(Sort.Direction.ASC, "idSeller"));
     }
 
     @Override
