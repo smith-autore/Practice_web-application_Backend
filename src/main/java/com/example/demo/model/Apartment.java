@@ -95,7 +95,7 @@ public class Apartment {
 
     public void setLivingSpace(Float livingSpace) { this.livingSpace = livingSpace;}
 
-    public Float getComfortFactor() { return  comfortFactor; }
+    public Float getComfortFactor() { return comfortFactor; }
 
     public void setComfortFactor(Float comfortFactor) { this.comfortFactor = comfortFactor; }
 }

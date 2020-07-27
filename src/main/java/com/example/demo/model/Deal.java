@@ -40,13 +40,13 @@ public class Deal {
         this.idDeal = idDeal;
     }
 
-    public Integer getIdBuyer() { return  idBuyer; }
+    public Integer getIdBuyer() { return idBuyer; }
 
     public void  setIdBuyer(Integer idBuyer) { this.idBuyer = idBuyer; }
 
     public Integer getIdSeller() { return idSeller; }
 
-    public void setIdSeller(Integer idBuyer) { this.idSeller = idSeller; }
+    public void setIdSeller(Integer idSeller) { this.idSeller = idSeller; }
 
     public Integer getIdApartment() { return  idApartment; }
 
